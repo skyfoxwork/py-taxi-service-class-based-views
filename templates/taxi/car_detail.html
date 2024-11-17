@@ -12,8 +12,12 @@
   </ul>
   <h5>Drivers:</h5>
   <ul>
+    {% if car.drivers.all %}
     {% for driver in car.drivers.all %}
       <li>{{ driver.first_name }} {{ driver.last_name }}</li>
     {% endfor %}
+    {% else %}
+      <p>There are no drivers.</p>
+    {% endif %}
   </ul>
 {% endblock %}
