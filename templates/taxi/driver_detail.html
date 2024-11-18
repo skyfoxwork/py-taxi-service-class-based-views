@@ -11,7 +11,7 @@
   </ul>
   <h5>Cars:</h5>
   <ul>
-    {% if driver.cars.all %}
+    {% if driver.cars.exists %}
       {% for car in driver.cars.all %}
         <li>{{ car.model }}</li>
       {% endfor %}
